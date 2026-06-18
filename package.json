@@ -1,0 +1,28 @@
+{
+  "name": "sauce-demo-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jose-Ataypoma/sauce-demo-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jose-Ataypoma/sauce-demo-tests/issues"
+  },
+  "homepage": "https://github.com/Jose-Ataypoma/sauce-demo-tests#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.0.0",
+    "playwright": "^1.61.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+  
+}
