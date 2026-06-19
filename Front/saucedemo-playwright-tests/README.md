@@ -1,42 +1,42 @@
-# Proyecto de Automatización QA – Sauce Demo -Jose Ataypoma
+# 🧪 Sauce Demo — Playwright + Cucumber Tests - Jose Ataypoma
 
-## Descripción
+## 📖 Descripción
 Este proyecto automatiza el flujo de compra en la aplicación **Sauce Demo**, validando desde el inicio de sesión hasta la confirmación final.  
-El objetivo es **asegurar la calidad del sistema** reduciendo errores, aumentando la confianza y facilitando la validación continua.  
-Está pensado para que tanto el equipo técnico como el de negocio puedan entender qué se está probando y por qué es importante.
+El objetivo es asegurar la calidad del sistema, reducir errores y aumentar la confianza en cada entrega.  
+La documentación está organizada para que tanto el equipo técnico como el de negocio comprendan el alcance y valor de la automatización.
 
+---
+
+## 📦 Prerrequisitos
+- **Node.js 18+** — verificar con `node --version`
+- **npm 9+** — verificar con `npm --version`
+- **Chromium** — instalar con:
+  ```bash
+  npx playwright install chromium
+ 
 ## Instalación
-1. Clonar el repositorio:
-   ```bash
-   git clone <url-del-repo>
-Ir al directorio del proyecto:
-
-bash
-cd Front/saucedemo-playwright-tests
-Instalar dependencias:
-
-bash
 npm install
-▶
-Ejecución de pruebas
-Ejecutar todas las pruebas:
 
-bash
+## Ejecución de Tests
+Todos los tests
 npm test
-Ejecutar por etiquetas (para separar flujos):
 
+Por feature (según etiquetas)
 bash
 npm run test:login
 npm run test:carrito
 npm run test:compra
-Generar y abrir reportes:
 
+Con navegador visible (debugging)
 bash
-npm run allure:generate
-npm run allure:open
+npm run test:headed
 
-## Estructura del proyecto
+Reportes
+Tras cada ejecución se genera un reporte HTML en:
+Código
+reports/cucumber-report.html
 
+Estructura del Proyecto
 ```text
 saucedemo-playwright-tests/
 ├── features/        # Escenarios en Gherkin
