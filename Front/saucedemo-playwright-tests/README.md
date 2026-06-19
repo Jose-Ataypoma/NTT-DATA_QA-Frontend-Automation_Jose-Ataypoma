@@ -35,20 +35,21 @@ bash
 npm run allure:generate
 npm run allure:open
 
- Estructura del proyecto
-Código
-saucedemo-playwright-tests/
-├── features/          # Escenarios en Gherkin (español, fáciles de leer)
-├── steps/             # Definiciones de pasos que conectan escenarios con código
-├── pages/             # Page Objects: representan pantallas y acciones de usuario
-├── support/           # Configuración, hooks y utilidades compartidas
-├── reports/           # Reportes generados en JSON/HTML
-├── cucumber.js        # Configuración de perfiles y etiquetas de Cucumber
-├── package.json       # Dependencias y scripts de ejecución
-├── tsconfig.json      # Configuración de TypeScript
-├── README.md          # Documentación del proyecto
-└── .gitignore         # Archivos y carpetas que no deben subirse a Git
+## Estructura del proyecto
 
+```text
+saucedemo-playwright-tests/
+├── features/        # Escenarios en Gherkin
+├── steps/           # Definiciones de pasos
+├── pages/           # Page Objects
+├── support/         # Hooks y utilidades
+├── reports/         # Reportes generados
+├── cucumber.js      # Configuración Cucumber
+├── package.json     # Dependencias y scripts
+├── tsconfig.json    # Configuración TypeScript
+├── README.md        # Documentación
+└── .gitignore       # Archivos ignorados por Git
+```
 
 
 
