@@ -1,83 +1,55 @@
-# sauce-demo-tests
+# Proyecto de Automatización QA – Sauce Demo -Jose Ataypoma
 
 ## Descripción
-
-Proyecto de pruebas automatizadas para la aplicación Sauce Demo usando Playwright y Cucumber.
-
-## Requisitos previos
-
-- Node.js instalado (recomendado: versión 18 o superior).
-- Git instalado si se quiere clonar el repositorio.
+Este proyecto automatiza el flujo de compra en la aplicación **Sauce Demo**, validando desde el inicio de sesión hasta la confirmación final.  
+El objetivo es **asegurar la calidad del sistema** reduciendo errores, aumentando la confianza y facilitando la validación continua.  
+Está pensado para que tanto el equipo técnico como el de negocio puedan entender qué se está probando y por qué es importante.
 
 ## Instalación
-
-1. Abrir una terminal en la carpeta del proyecto:
-
+1. Clonar el repositorio:
    ```bash
-   cd c:\Users\User\Documents\Proyecto\sauce-demo-tests
-   ```
+   git clone <url-del-repo>
+Ir al directorio del proyecto:
 
-2. Instalar dependencias:
+bash
+cd Front/saucedemo-playwright-tests
+Instalar dependencias:
 
-   ```bash
-   npm install
-   ```
+bash
+npm install
+▶
+Ejecución de pruebas
+Ejecutar todas las pruebas:
 
-## Ejecución de los tests
-
-### Ejecutar la suite principal
-
-```bash
+bash
 npm test
-```
+Ejecutar por etiquetas (para separar flujos):
 
-Este comando ejecuta `cucumber-js` con la configuración definida en `cucumber.json`.
+bash
+npm run test:login
+npm run test:carrito
+npm run test:compra
+Generar y abrir reportes:
 
-### Ejecutar con el perfil de Allure
-
-```bash
-npx cucumber-js -p allure
-```
-
-Esto ejecuta los tests usando el formatter `allure-cucumberjs/reporter` y genera los resultados en el directorio `allure-results`.
-
-> Nota: la versión de Allure CLI que se usa aquí no admite el flag `--clean` en `generate`. El comando correcto es:
->
-> ```bash
-> npx allure generate allure-results --output allure-report
-> ```
-
-## Usar Allure CLI
-
-Una vez ejecutada la suite con el perfil de Allure, genera y abre el reporte así:
-
-```bash
+bash
 npm run allure:generate
 npm run allure:open
-```
 
-Si prefieres usar los comandos directos de Allure:
+ Estructura del proyecto
+Código
+saucedemo-playwright-tests/
+├── features/          # Escenarios en Gherkin (español, fáciles de leer)
+├── steps/             # Definiciones de pasos que conectan escenarios con código
+├── pages/             # Page Objects: representan pantallas y acciones de usuario
+├── support/           # Configuración, hooks y utilidades compartidas
+├── reports/           # Reportes generados en JSON/HTML
+├── cucumber.js        # Configuración de perfiles y etiquetas de Cucumber
+├── package.json       # Dependencias y scripts de ejecución
+├── tsconfig.json      # Configuración de TypeScript
+├── README.md          # Documentación del proyecto
+└── .gitignore         # Archivos y carpetas que no deben subirse a Git
 
-```bash
-npx allure generate allure-results --output allure-report
-npx allure open allure-report
-```
 
-## Generar reporte HTML de Cucumber
-
-```bash
-npm run test:report
-```
-
-Este comando ejecuta los tests, genera el archivo JSON en `reports/cucumber.json` y luego construye el reporte HTML en `reports/cucumber-report.html`.
-
-## Estructura del proyecto
-
-- `features/` - archivos `.feature` con los escenarios de Cucumber.
-- `steps/` - definiciones de pasos de Cucumber en TypeScript.
-- `support/` - hooks y configuración de pruebas.
-- `pages/` - Page Objects para los flujos de prueba.
-- `reports/` - resultados y reportes generados.
 
 
 
